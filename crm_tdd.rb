@@ -60,10 +60,13 @@ class TestCRM < Test::Unit::TestCase
 
 		db.add(contact)
 
-
-		
+		db.modify_contact(5, "firstname", "test")
+		expectedContact = Contact.new(6,"test", "lastname", "email", "notes")
+		assert_equal true, contact.firstname == expectedContact.firstname
 
 		end
+
+	def 	
 
 
 
